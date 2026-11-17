@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#0f0f0f] text-gray-100 font-sans antialiased;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-[#0f0f0f];
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-violet-700 rounded-full;
+  }
+}
+
+@layer components {
+  .accent-text {
+    @apply bg-gradient-to-r from-violet-400 to-blue-400 bg-clip-text text-transparent;
+  }
+
+  .card {
+    @apply bg-[#1a1a1a] border border-[#2a2a2a] rounded-xl p-6;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-violet-600 hover:bg-violet-700 text-white font-medium rounded-lg
+           transition-all duration-200 hover:shadow-lg hover:shadow-violet-900/30 cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 border border-[#2a2a2a] hover:border-violet-600 text-gray-300
+           hover:text-white font-medium rounded-lg transition-all duration-200 cursor-pointer;
+  }
+
+  .skill-tag {
+    @apply px-3 py-1.5 bg-[#1a1a1a] border border-[#2a2a2a] text-gray-400 text-sm rounded-lg
+           hover:border-violet-600/50 hover:text-violet-400 transition-all duration-200;
+  }
+
+  .section-label {
+    @apply text-violet-400 font-mono text-sm mb-2;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold text-white mb-3;
+  }
+
+  .section-divider {
+    @apply w-12 h-0.5 bg-violet-600 rounded mb-12;
+  }
+
+  .input-field {
+    @apply w-full bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg px-4 py-3 text-gray-300
+           placeholder-gray-600 focus:outline-none focus:border-violet-600 transition-colors duration-200;
+  }
+}
